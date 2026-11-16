@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Edow Jiru — Developer</title>
+  <meta name="description" content="Portfolio of Edow Jiru: an explorable galaxy where every star is a project." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=8" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body class="intro-on">
+  <canvas id="space" aria-hidden="true"></canvas>
+  <div id="labels" aria-hidden="true"></div>
+
+  <header class="hud">
+    <div class="who">
+      <img class="avatar" src="assets/me.jpg" alt="" />
+      <div>
+        <div id="name" class="name"></div>
+        <div id="role" class="role"></div>
+      </div>
+    </div>
+    <nav class="hud-actions">
+      <button id="tourBtn" class="chip">▶ Tour</button>
+      <button id="mapBtn" class="chip">Star map</button>
+      <a id="githubBtn" class="chip" href="#" target="_blank" rel="noopener">GitHub</a>
+      <a id="resumeBtn" class="chip solid" href="#" target="_blank" rel="noopener">Résumé</a>
+    </nav>
+  </header>
+
+  <section id="intro" class="intro">
+    <div class="portrait"><img src="assets/me.jpg" alt="Photo of Edow Jiru" /></div>
+    <p class="mono">// incoming transmission</p>
+    <h1 id="introName"></h1>
+    <p id="introRole"></p>
+    <p class="hint">Every star is something I've built. Click one to fly there.</p>
+    <div class="intro-actions">
+      <button id="introTour" class="chip solid">Take the tour</button>
+      <button id="introExplore" class="chip">Explore freely</button>
+    </div>
+  </section>
+
+  <div class="legend mono">
+    <span><i class="dot live"></i>Live</span>
+    <span><i class="dot dev"></i>In development</span>
+    <span><i class="dot school"></i>School project</span>
+    <span><i class="dot about"></i>About me</span>
+    <span class="keys">drag · scroll · esc</span>
+  </div>
+
+  <aside id="panel" class="panel" aria-live="polite" aria-hidden="true">
+    <button id="closeBtn" class="close" aria-label="Back to galaxy">✕</button>
+    <div id="panelBody" class="panel-body"></div>
+    <footer class="panel-nav">
+      <button id="prevBtn" class="chip">← Prev</button>
+      <span id="navCount" class="mono"></span>
+      <button id="nextBtn" class="chip">Next →</button>
+    </footer>
+  </aside>
+
+  <div id="map" class="map" hidden>
+    <div class="map-card">
+      <button id="mapClose" class="close" aria-label="Close star map">✕</button>
+      <h2>Star map</h2>
+      <div id="mapList"></div>
+    </div>
+  </div>
+
+  <noscript><p class="noscript">This site is an interactive galaxy and needs JavaScript.</p></noscript>
+
+  <script src="data.js?v=9"></script>
+  <script type="module" src="main.js?v=9"></script>
+</body>
+</html>
