@@ -1,0 +1,11 @@
+:root { --bg: #05070a; --ink: #e8eef5; --dim: #8a97a6; --accent: #3ecfd6; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif; }
+main { max-width: 720px; margin: 0 auto; padding: 48px 16px 64px; }
+h1 { font-size: 30px; margin: 0 0 4px; }
+h2 { font-size: 19px; margin: 32px 0 6px; }
+p, li { color: var(--ink); }
+.dim { color: var(--dim); }
+a { color: var(--accent); }
+nav { margin-bottom: 32px; }
+nav a { margin-right: 16px; text-decoration: none; }
