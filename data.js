@@ -7,7 +7,7 @@
 window.SITE = {
   name: "Edow Jiru",
   role: "Software Developer · Builder of small, delightful tools",
-  resumeUrl: "#",            // link to your PDF resume
+  resumeUrl: "assets/Edow_Jiru_Resume.pdf",
   github: "https://github.com/agiantleapproduction",
   email: "",                 // optional
 };
